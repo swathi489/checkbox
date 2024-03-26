@@ -1,0 +1,51 @@
+/* App.css */
+
+.checkbox-container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+}
+
+.checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-custom::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 3px;
+  border-radius: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  background-color: #2196f3;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background-color: #e1f5fe;
+}
+
+.checkbox-label:hover .checkbox-custom {
+  background-color: #f5f5f5;
+}
